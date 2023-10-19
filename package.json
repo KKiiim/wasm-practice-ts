@@ -1,0 +1,25 @@
+{
+  "name": "wasm-practice-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "rm build -fr && mkdir build && clang --target=wasm32 --no-standard-libraries -Wl,--export-all -Wl,--no-entry -o ./build/myqsort.wasm ./src/c-qsort.c && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.9",
+    "@types/mocha": "^10.0.3",
+    "@types/sinon": "^10.0.20",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "sinon": "^16.1.3",
+    "typescript": "^5.2.2"
+  }
+}
